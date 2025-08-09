@@ -1,0 +1,113 @@
+/*
+Header background:
+Gradient: bg-gradient-to-tr from-red-500 via-pink-400 to-blue-500
+
+From color: red-500 (#EF4444)
+
+Via color: pink-400 (#F472B6)
+
+To color: blue-500 (#3B82F6)
+
+Navigation bar background:
+Solid color: white (#FFFFFF)
+
+Company name ("Mawjood") text color:
+Text color: red-600 (#DC2626)
+
+Product menu link text color:
+Text color: #3b82f6 (Tailwind blue-500)
+
+Product menu icon color:
+Text color: gray-400 (#9CA3AF)
+
+Dropdown menu background:
+Solid color: white (#FFFFFF)
+
+Dropdown menu text color:
+Text color: gray-700 (#374151)
+Hover background color: gray-100 (#F3F4F6)
+
+Links "Home" and "Profile":
+Text color: #3b82f6 (Tailwind blue-500)
+
+Log In and Sign Up buttons background:
+Solid color: #3b82f6 (Tailwind blue-500)
+Border color: #38bdf8 (Tailwind sky-400)
+Hover background color: #0ea5e9 (Tailwind sky-500)
+Text color: white (#FFFFFF)
+
+Hero Section Text:
+Text color: white (#FFFFFF)
+
+"Shop Now" button:
+Background: white (#FFFFFF)
+Text color: red-600 (#DC2626)
+Hover background: gray-100 (#F3F4F6)
+
+Feature icons:
+Text color: red-600 (#DC2626)
+
+Feature headings:
+Text color: default (likely black or dark gray)
+
+Section title "Why Choose Us?":
+Text color: default black (#000000) 
+ */
+:root
+{
+    --gray-back: #f8fafc
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* header */
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease-out forwards;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.products:hover .dropdown
+{
+    display: block;
+    transition-delay: 2s;
+}
+/* end of header  */
+/* auto-scrolling horizontal card */
+    @keyframes scrollX {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .scrolling {
+      animation: scrollX 20s linear infinite;
+    }
+    .scroller:hover .scrolling {
+      animation-play-state: paused;
+    }
+  /*  */
+  /* cards */
+  .cat {
+  z-index: 2;
+  transform: translateY(0);
+}
+
+.add_to_cart {
+  z-index: 1;
+  transform: translateY(-100%);
+}
+
+.cat_cart_container:hover .cat{
+  transform: translateY(100%);
+}
+
+.cat_cart_container:hover .add_to_cart {
+  transform: translateY(0);
+}
