@@ -1,3 +1,21 @@
+// handle animation of features section 
+document.addEventListener("DOMContentLoaded", () => {
+  const featuresSection = document.querySelector("#features");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        featuresSection.classList.add("show");
+        observer.unobserve(featuresSection); 
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(featuresSection);
+});
+//--------------------------------------------------------------------------
+
+
 // fetch api 
 async function fetchAPI(url) {
   try {
