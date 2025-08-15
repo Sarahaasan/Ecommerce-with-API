@@ -1,14 +1,4 @@
-//handle navbar toggle
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('mobile-menu');
 
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('hidden');
-    });
-  }
-});
 //---------------------------------------------------------------------------
 // handle animation of features section 
 document.addEventListener("DOMContentLoaded", () => {
